@@ -115,11 +115,11 @@ textarea:not([rows]) {
 .top {
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Distribute items horizontally */
-    align-items: center; /* Align items vertically */
+    justify-content: space-between; 
+    align-items: center; 
     font-size: 16px;
     font-weight: 400;
-    margin-top: 24px; /* Simplified margin */
+    margin-top: 24px; 
     margin-bottom: 30px;
 }
 
@@ -130,14 +130,14 @@ textarea:not([rows]) {
 }
 
 .logo-checkout {
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%; 
     font-size: var(--fs-header1);
     font-family: var(--font-h1);
     text-decoration: none;
 }
 
 .logo-checkout h1 {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 
 }
 
@@ -152,8 +152,8 @@ textarea:not([rows]) {
 
 .cart {
     width: 24px;
-    height: 24px; /* Set the height to maintain the aspect ratio */
-    object-fit: contain; /* Ensure the entire image fits within the specified dimensions */
+    height: 24px; 
+    object-fit: contain; 
 }
 
 .item-text {
@@ -161,20 +161,19 @@ textarea:not([rows]) {
     margin: auto 0;
 }
 
-/* Media Queries for smaller viewports */
 @media screen and (max-width: 991px) {
     .header-checkout {
-        padding: 10px; /* Reduce padding for smaller viewports */
+        padding: 10px; 
     }
     
     .top {
-        flex-direction: row; /* Stack items vertically for smaller viewports */
-        text-align: center; /* Center-align items */
+        flex-direction: row; 
+        text-align: center; 
         font-size: 80%;
     }
 
     .logo-checkout {
-        font-size: 2em; /* Adjust font size for smaller viewports */
+        font-size: 2em; 
     }
 
 }
@@ -184,12 +183,12 @@ textarea:not([rows]) {
 
 
 .wrapper {
-    margin-top: 2%; /* Slightly reduced margin-top for better space utilization */
-    width: auto; /* Changed from fixed percentage to auto for better flexibility */
-    max-width: 800px; /* Max width to ensure content doesn't stretch too much on wider screens */
-    min-width: 320px; /* Minimum width to ensure content doesn't get too squeezed */
-    padding: 2%; /* Adjusted padding */
-    margin: 0 auto; /* Center align the wrapper */
+    margin-top: 2%;
+    width: auto;
+    max-width: 800px;
+    min-width: 320px;
+    padding: 2%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     font-family: var(--font-body);
@@ -272,15 +271,47 @@ form {
 
 
 form input, form select, form textarea {
-    width: calc(100% - 20px); /* Adjust width to account for padding */
-    min-width: 0; /* Reset min-width to prevent overflow */
-    padding: 10px; /* Added padding for better touch target size */
-    margin-top: 5px; /* Adjusted margin-top */
+    width: calc(100% - 20px); 
+    min-width: 0; 
+    padding: 10px; 
+    margin-top: 5px; 
 }
 
+@media (max-width: 991px) {
+    form {
+        >* {
+            margin-top: 10px;
+        }
 
+        input, select, textarea {
+            min-height: 10px; 
+            padding: 8px; 
+            font-size: 0.9rem; 
+        }
 
+        label {
+            font-size: 11px; 
+            letter-spacing: 1px; 
+        }
 
+        h1 {
+            font-size: 20px; 
+            line-height: 8px;
+        }
+
+        h1:nth-of-type(2) {
+            margin-top: 5%; 
+        }
+    }
+
+    .name div, .cc-info div {
+        width: 50%; 
+    }
+
+    .address-info div {
+        width: 45%; 
+    }
+}
 
 
 
@@ -288,14 +319,14 @@ form input, form select, form textarea {
     border-radius: 10px;
     background-color: var(--lightgrey);
     display: flex;
-    align-items: left; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    width: 20%; /* Reduced width */
+    align-items: left; 
+    justify-content: center; 
+    width: 20%; 
     flex-direction: column;
-        max-width: 300px; /* Adjusted max-width for better control */
-        min-width: 280px; /* Minimum width to prevent squeezing */
-        padding: 20px; /* Adjusted padding for consistency */
-        margin: 20px auto; /* Margin auto for center alignment */
+        max-width: 300px; 
+        min-width: 280px; 
+        padding: 20px; 
+        margin: 20px auto; 
         
     
 
@@ -306,7 +337,7 @@ form input, form select, form textarea {
 @media (max-width: 991px) {
     .cart-summary {
         margin-top: 0px;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 }
 
@@ -319,7 +350,7 @@ form input, form select, form textarea {
 }
 
 .section-1 {
-    gap: 15px; /* Reduced gap */
+    gap: 15px; 
     display: flex;
 }
 
@@ -349,7 +380,7 @@ form input, form select, form textarea {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px; 
     color: var(--darkgreen);
     font-weight: 500;
 }
@@ -363,35 +394,35 @@ form input, form select, form textarea {
 .order-summary h1 {
     font-family: var(--font-body);
     font-weight: var(--fw-bold);
-    font-size: 18px; /* Reduced font size */
+    font-size: 18px; 
 
 }
 
 .column-1 img {
-    margin-top: 10px; /* Reduced margin */
-    height: 150px; /* Reduced height */
+    margin-top: 10px; 
+    height: 150px; 
     background-color: var(--white);
     width: 170px;
 }
 
 .jacket {
     font-family: var(--font-body);
-    margin-top: 20px; /* Reduced margin */
-    font-size: 14px; /* Reduced font size */
+    margin-top: 20px; 
+    font-size: 14px;
 }
 
 .price {
     font-family: var(--font-body);
     font-weight: 700;
-    margin-top: 15px; /* Reduced margin */
-    font-size: 16px; /* Reduced font size */
+    margin-top: 15px; 
+    font-size: 16px; 
 }
 
 .code-entry {
     color: var(--darkgreen);
     margin-top: 30px;
     font-family: var(--font-body);
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px; 
 }
 
 /* container holding apply and form*/ 
@@ -411,48 +442,38 @@ form input, form select, form textarea {
 
 
 .middle-container input {
-    /* To make sure that all text fields have the same font settings
-       By default, textareas have a monospace font */
     font-family: var(--font-body);
-    /* Uniform text field size */
     box-sizing: border-box;
-    /* Match form field borders */
     border: 1px solid var(--white);
-    width: 30%; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
-    font-size: 14px; /* Adjust font size as needed */
+    width: 30%; 
+    height: 30px; 
+    font-size: 14px; 
 }
 
 .middle-container button {
     background-color: var(--darkgreen);
-    border: none; /* Remove border */
+    border: none; 
     color: var(--white);
-    width: 10%; /* Adjust width as needed */
+    width: 10%; 
     height: 30px;
     font-size: 12px;
     text-align: center;
-    
     display: inline-block;
-    /* Adjust margin as needed */
     border-radius: .5em;
     font-family: var(--font-body);
-
-    /* Hover effect */
-    transition: 0.3s ease; /* Smooth transition effect */
-    cursor: pointer; /* Change cursor to pointer */
+    transition: 0.3s ease; 
+    cursor: pointer; 
 }
 
 .apply-button:hover {
-    background-color: var(--lightgreen); /* Change background color on hover */
+    background-color: var(--lightgreen); 
 }
 
 
 
-
-/* Media query for smaller screens */
 @media (max-width: 991px) {
     input {
-        width: 250px; /* Reduce width for smaller screens */
+        width: 250px; 
     }
 
 }
@@ -467,77 +488,49 @@ form input, form select, form textarea {
     margin-top: 10px;
 }
 
-@media (max-width: 991px) {
-    .two-column {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-}
-
-.-container {
-    gap: 20px;
-    display: flex;
-}
-
-@media (max-width: 991px) {
-    .bottom-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0px;
-    }
-}
-
-
-
-/* Table styling */
 .two-column table {
     width: 100%;
 }
 
 .two-column td {
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
     font-family: var(--font-body);
     color: var(--darkgreen);
     font-weight: var(--fw-light);
-    padding: 5px 0; /* Reduced padding */
+    padding: 5px 0;
 }
 
 .two-column .total {
     color: var(--darkgreen);
     font-weight: var(--fw-bold);
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px;
 }
 
 .two-column .free {
     color: var(--lightgreen);
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
 }
 
-/* Wrap the checkout button in a container */
-.checkout-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-}
+
+
 
 /* Apply styling to the checkout button */
 .checkout {
     background-color: var(--darkgreen);
     border: none;
     color: var(--white);
-    width: 320px; /* Reduced width */
-    height: 40px; /* Reduced height */
+    width: 250px;
+    height: 40px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px;
     border-radius: .5em;
     font-family: var(--font-body);
     transition: 0.3s ease;
     cursor: pointer;
-    align-self: center; /* Center vertically */
+    align-self: center;
 }
 
-/* Apply hover effect to the checkout button */
 .checkout:hover {
     background-color: var(--lightgreen);
 }
@@ -546,6 +539,7 @@ form input, form select, form textarea {
     .checkout {
         margin-top: 40px;
         padding: 0 20px;
+        width: 60%;
     }
 }
 
@@ -553,10 +547,10 @@ form input, form select, form textarea {
     text-align: center;
     color: var(--darkgreen);
     text-decoration-line: underline;
-    margin-top: 20px; /* Reduced margin */
-    font-family: var(--font-body);/* Reduced font size */
+    margin-top: 20px;
+    font-family: var(--font-body);
     font-size: 12px;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px;
 }
 
 @media (max-width: 991px) {
@@ -568,48 +562,51 @@ form input, form select, form textarea {
 
 /* Base styles outside media queries to ensure mobile-first design */
 .wrapper, .cart-summary {
-    width: 80%; /* Default width for mobile devices */
-    margin-bottom: 1em; /* Spacing between elements when stacked */
-    margin: 0 auto; /* Center align the elements */
+    width: 80%;
+    margin-bottom: 1em;
+    margin: 0 auto;
 }
+
 
 .checkout-container {
     display: flex;
-    flex-direction: column; /* Stack elements on mobile */
-    align-items: center; /* Align items for mobile */
+    justify-content: space-around; 
+    align-items: flex-start; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
-/* For larger viewports */
+
 @media screen and (min-width: 992px) {
     .checkout-container {
-        flex-direction: row; /* Display sections side by side */
-        justify-content: space-between; /* Add space between the sections */
+        flex-direction: row;
+        justify-content: center;
     }
   
     .wrapper, .cart-summary {
-        width: 45%; /* Adjust width to fit side by side */
-        min-width: 300px; /* Minimum width to prevent too much squeezing */
-        margin-bottom: 0; /* Reset margin-bottom for side-by-side layout */
+        width: 50%;
+        min-width: 300px;
+        margin-bottom: 10px;
     }
   
     .cart-summary {
-        order: 0; /* Reset order to natural flow */
+        order: 0;
     }
 }
 
-/* For smaller viewports */
 @media screen and (max-width: 991px) {
     .checkout-container {
-        flex-direction: column; /* Ensure sections stack on smaller viewports */
+        flex-direction: column;
     }
   
     .wrapper, .cart-summary {
-        width: 90%; /* Increase width for smaller screens to take more space */
+        width: 90%;
         margin-bottom: 2em;
     }
   
     .cart-summary {
-        order: -1; /* Move cart-summary above for better visibility on mobile */
+        order: -1;
         width: 90%;
     }
 
@@ -617,4 +614,3 @@ form input, form select, form textarea {
         margin-top: 20px;
     }
 }
-
