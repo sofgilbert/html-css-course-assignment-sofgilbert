@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Rainydays | The Rainyday Jacket</title>
+    <meta name="description" content="The number one rated rain jacket for all occassions, our rain jackets come in numerous styles with numerous windproof levels, insolation levels and more." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-jacket.css" >
+    <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+
+</head>
+<body> 
+    <header class="primary-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#"><img src="images/favicon.svg" alt="Raindrop"></a>
+                    <button class="mobile-nav-toggle" aria-controls="">
+                        <img class="icon-hamburger" src="images/hamburger.svg" alt="" aria-hidden="true">
+                        <span class="visually-hidden">Menu</span>
+                    </button>
+                    <nav class="secondary-navigation" >
+                        <ul aria-label="secondary" role="list" class="nav-bar" id="secondary-navigation">
+                            <li><a aria-label="search" href="#"><img src="images/search-circle.svg"></a></li>
+                            <li><a aria-label="user" href="#"><img src="images/user-circle.svg"></a></li>
+                            <li><a aria-label="likes" href="#"><img src="images/heart.svg"></a></li>
+                            <li><a aria-label="cart" href="#"><img src="images/shopping-bag.svg"></a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+    </header>
+    <header class="secondary-header">
+            <div class="container">
+                <div class="nav-wrapper-second">
+                    <nav class="primary-nav font-h1 center">
+                        <a href="#"><h1 class="font-h1 fs-primary-heading padding-block-300 ">rainydays</h1></a>
+                        <ul aria-label="primary" role="list" class="nav-list" id="primary-navigation">
+                            <li><a href="#">New in</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">About rainydays</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+
+
+
+<main>
+    <section class="two-columns-jacket">
+        <section class="column1-jacket">
+            <div class="jacket"><img src="images/jacket-pink.svg" alt="Jacket pink"></div>
+        </section>
+        <section class="column2-jacket"> 
+            <h3 class="fs-tertiary-heading">rainyday The Rainyday Jacket</h3>
+                <button>Women</button>
+                <button>Men</button>
+            <p>Colour: Pink</p>
+            <div><img src="images/colours.jpg"></div>
+            <p>Size: XS S M L XL</p>
+            <button class = "cta-button">Add to Cart</button>
+        </section>
+    </section>
+
+    <section class="text-section">
+        <div><p>Your ultimate companion for outdoor adventures. Crafted for durability and versatility, this sleek, longer silhouette offers extended coverage and protection. </p></div>
+        <div><ul> 
+            <li>Double welded slanting flap pockets </li>
+            <li>Adjustable cuffs</li>
+            <li>Fishtail hem</li>
+            <li>Made from our signature PU fabric</li>
+            <li>Ultrasonically welded seams</li>
+        </ul></div>
+        <div><p>The Rainyday Jacket  ensures superior waterproof and windproof performance while remaining lightweight and breathable. </p></div>
+    </section>
+
+
+
+
+</section>
+<div class="carousel">
+    <div class="carousel-inner">
+      <div class="jacket"><img src="images/jacket-green.svg" alt="Jacket green"></div>
+      <div class="jacket"><img src="images/jacket-brown.svg" alt="Jacket brown"></div>
+      <div class="jacket"><img src="images/jacket-grey.svg" alt="Jacket grey"></div>
+      <div class="jacket"><img src="images/jacket-blue.svg" alt="Jacket blue"></div>
+      <div class="jacket"><img src="images/jacket-pink.svg" alt="Jacket pink"></div>
+    </div>
+    <span class="carousel-arrow prev">&#10094;</span>
+    <span class="carousel-arrow next">&#10095;</span>
+  </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const inner = document.querySelector('.carousel-inner');
+    const jackets = document.querySelectorAll('.jacket');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let currentIndex = 0;
+
+    prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? jackets.length - 3 : currentIndex - 1;
+    updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === jackets.length - 3) ? 0 : currentIndex + 1;
+    updateCarousel();
+    });
+
+    function updateCarousel() {
+      inner.style.transform = `translateX(-${currentIndex * (100 / jackets.length)}%)`;
+    }
+  </script>
+
+
+
+
+    
+</main>
+
+<footer class="">
+     <div class="footer-content-container">
+        <div>
+            <form class="footer-form" action="" method="get">
+                <input type="email"> 
+            </form>
+            <button class="button">Subscribe to rainydays!</button>
+        </div>
+        <nav class="footer-nav-left">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Fabric Care</a></li>
+                <li><a href="#">Our Services</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-nav-right">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>

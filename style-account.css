@@ -1,0 +1,230 @@
+:root {
+    --white: #fff;
+    --black: #000000;
+    --darkgreen: #41473D;
+    --lightgreen: #7E9157;
+    --lightgrey: #d9dad8;
+    --slategrey: #717f95;
+  
+    --font-h2: "Archivo Black", sans-serif;
+    --font-body: "Archivo", sans-serif;
+    --font-h1: var(--font-body);
+    --font-accent: var(--font-body);
+  
+    --fw-light: 300;
+    --fw-medium: 500;
+    --fw-bold: 700;
+  
+    --fs-body: 0.7125rem;
+    --fs-header2: 1.875rem;
+    --fs-header1: 1.5rem;
+    --fs-header3: 1rem;
+    --fs-nav: 1rem;
+    --fs-button: 0.8125rem;
+    --fs-footer: 0.8125rem;
+  
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+    --size-largest: 6rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: var(--darkgreen);
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+img, picture, svg {
+    max-width: 100%;
+    display: block;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5em;
+}
+
+.header-checkout {
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+.return {
+    color: #41473d;
+    font-family: var(--font-body);
+    text-decoration-line: underline;
+}
+
+.logo-checkout {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: var(--fs-header1);
+    font-family: var(--font-h1);
+}
+
+.logo-checkout h1 {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    gap: 9px;
+    background-color: var(--darkgreen);
+    padding: 1em;
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.cart {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.item-text {
+    font-family: var(--font-body);
+    margin: auto 0;
+}
+
+@media screen and (max-width: 991px) {
+    .header-checkout {
+        padding: 10px;
+    }
+    
+    .top {
+        flex-direction: row;
+        text-align: center;
+        font-size: 80%;
+    }
+
+    .logo-checkout {
+        font-size: 2em;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.signin {
+    background-color: var(--darkgreen);
+    border: none;
+    color: var(--white);
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: .5em;
+    font-family: var(--font-body);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.create-account,
+.guest {
+    background-color: var(--white);
+    border: 1px solid var(--darkgreen);
+    color: var(--darkgreen);
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: .5em;
+    font-family: var(--font-body);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.signin:hover,
+.create-account:hover,
+.guest:hover {
+    background-color: var(--lightgreen);
+}
+
+.button-container h2 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--darkgreen);
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.cancel {
+    text-align: center;
+    color: var(--darkgreen);
+    text-decoration-line: underline;
+    margin-top: 100px;
+    font-family: var(--font-body);
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .cancel {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signin,
+    .create-account,
+    .guest {
+        width: 80%;
+        font-size: 18px;
+    }
+}

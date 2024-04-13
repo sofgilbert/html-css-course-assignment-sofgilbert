@@ -1,0 +1,460 @@
+/* Define CSS variables */
+:root {
+    --white: #fff;
+    --black: #000000;
+    --darkgreen: #41473D;
+    --lightgreen: #7E9157;
+    --lightgrey: #d9dad8;
+    --slategrey: #717f95;
+
+    --font-h2: "Archivo Black", sans-serif;
+    --font-body: "Archivo", sans-serif;
+    --font-h1: var(--font-body);
+    --font-accent: var(--font-body);
+
+    --fw-light: 300;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-body: 0.7125rem;
+    --fs-header2: 1.875rem;
+    --fs-header1: 2.5rem;
+    --fs-header3: 1rem;
+    --fs-nav: 1rem;
+    --fs-button: 0.8125rem;
+    --fs-footer: 0.8125rem;
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+    --size-largest: 6rem;
+}
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--darkgreen);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img, picture, svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+
+
+
+/* General styling */
+/* Primary nav */
+.primary-header {
+    margin-top: var(--size-200);
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.secondary-header {
+    margin-top: var(--size-200);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+}
+
+.secondary-navigation img {
+    width: 30px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between images */
+}
+
+/* Ensuring the container takes up the full width and centers its content */
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the wrapper spans the entire width */
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.top-line-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%; /* Adjust as needed */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 50em) {
+    .top-line-logo {
+        width: 20%; /* Adjust as needed */
+    }
+
+    /* Ensure icons stay in a horizontal line */
+    .secondary-navigation{
+        flex: 1; /* Allow the icons to take up remaining space */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Align icons to the right */
+        margin-left: auto; /* Push icons to the right */
+    }
+
+    .secondary-navigation img {
+        width: 40px; /* Adjust as needed */
+        margin-left: 10px; /* Add some space between icons */
+    }
+
+    .secondary-navigation {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: 0.5em;
+    }
+}
+
+
+
+/* Slogans, text and images */ 
+
+
+
+.two-columns {
+    text-align: left;
+    margin: 10em auto;
+    max-width: 800px; 
+    font-family: var(--font-body);
+    columns: 2;
+}
+
+.two-columns h3,
+.two-columns p {
+    margin-bottom: 1.5em; 
+}
+
+/* Ensure column 2 stays intact */
+.column2 {
+    break-inside: avoid; 
+}
+
+/* smaller screens */
+@media screen and (max-width: 768px) {
+    .two-columns {
+        max-width: 75%; 
+        margin: 6em auto;
+    }
+}
+
+/* even smaller screens */
+@media screen and (max-width: 480px) {
+    .two-columns {
+        max-width: 60%;
+        margin: 4em auto; 
+    }
+}
+
+
+
+/* Lists styling */
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: var(--darkgreen);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: var(--lightgreen);
+}
+
+nav ul {
+    padding: 0;
+}
+
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: var(--fs-button);
+    font-family: var(--font-body);
+    color: var(--white);
+    background-color: var(--darkgreen);
+    border: 1px solid var(--darkgreen);
+    padding: 3px 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: var(--lightgreen);
+    color: var(--white);
+}
+
+.padding-block-largest {
+    padding-block: var(--size-largest);
+}
+
+.padding-block-800 {
+    padding-block: var(--size-800);
+}
+
+.padding-block-300 {
+    padding-block: var(--size-300);
+}
+
+.container {
+    --max-width: 1110px;
+    --padding: 2rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: var(--darkgreen);
+    color: #FFF;
+    font-family: var(--font-body);
+    font-size: var(--fs-footer);
+    padding: 2rem; /* Adjust padding as needed */
+    text-align: center; /* Center the content horizontally */
+}
+
+.footer-content-container {
+    display: flex;
+    flex-wrap: wrap; /* Items will wrap to the next line when necessary */
+    justify-content: space-evenly;
+    align-items: flex-start; /* Align items to the top of the container */  
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: left;
+}
+
+.footer-form {
+    flex: 1 1 auto; /* Allow form to grow and shrink */
+    margin-right: 1rem; /* Adjust margin as needed */
+    margin-bottom: 1rem; /* Add margin at the bottom */
+    border-radius: 50px;
+}
+
+.button {
+    flex: 0 1 auto; /* Allow button to grow and shrink */
+    align-self: center; /* Align button vertically center */
+    border-radius: 20px;
+}
+
+.footer-nav-left,
+.footer-nav-right {
+    flex: 0 0 100px; /* Fixed width for each column */
+    margin-right: 1rem; /* Adjust margin as needed */
+    margin-bottom: 1rem; /* Add margin at the bottom */
+}
+
+.footer-nav-left ul,
+.footer-nav-right ul {
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list style */
+}
+
+.footer-nav-left ul li,
+.footer-nav-right ul li {
+    margin-bottom: 0.5rem; /* Adjust margin as needed */
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Utility classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-green {
+    color: var(--darkgreen);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-accent {
+    color: var(--lightgreen);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-light {
+    font-weight: var(--fw-light);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.fs-primary-heading {
+    font-size: var(--fs-header1);
+    text-align: center;
+}
+
+.fs-secondary-heading {
+    font-size: var(--fs-header2);
+    text-align: center;
+}
+
+.fs-tertiary-heading {
+    font-size: var(--fs-header3);
+    text-align: left;
+    font-weight: var(--fw-bold);
+}
+
+.fs-body {
+    font-size: var(--fs-body);
+}
+
+.fs-footer {
+    font-size: var(--fs-footer);
+}
+
+.font-h1 {
+    font-family: var(--font-h1);
+}
+
+.font-h2 {
+    font-family: var(--font-h2);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.bg-neutral {
+    background-color: var(--darkgreen);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* Media query for smaller viewports */
+@media screen and (max-width: 800px) {
+    .slogan,
+    .user-images {
+        height: 20vh; /* Adjust the height for smaller viewports */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-img {
+        height: 40vh; /* Adjust the height for smaller viewports */
+    }
+}

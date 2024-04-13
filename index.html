@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Rainydays | Home</title>
+    <meta name="description" content="The home page for Rainydays, the number one rainjacket company for all occasions. Stay dry and in style with Rainydays." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+
+</head>
+<body> 
+    <header class="primary-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#"><img src="images/favicon.svg" alt="Raindrop"></a>
+                
+                    <button class="mobile-nav-toggle" aria-controls="">
+                        <img class="icon-hamburger" src="images/hamburger.svg" alt="" aria-hidden="true">
+                        <span class="visually-hidden">Menu</span>
+                    </button>
+                    <nav class="secondary-navigation" >
+                        <ul aria-label="secondary" role="list" class="nav-bar" id="secondary-navigation">
+                            <li><a aria-label="search" href="#"><img src="images/search-circle.svg"></a></li>
+                            <li><a aria-label="user" href="#"><img src="images/user-circle.svg"></a></li>
+                            <li><a aria-label="likes" href="#"><img src="images/heart.svg"></a></li>
+                            <li><a aria-label="cart" href="#"><img src="images/shopping-bag.svg"></a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+    </header>
+    <header class="secondary-header">
+            <div class="container">
+                <div class="nav-wrapper-second">
+                    <nav class="primary-nav font-h1 center">
+                        <ul aria-label="primary" role="list" class="nav-list" id="primary-navigation">
+                            <li><a href="#">New in</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">About rainydays</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+<main>
+    <section>
+        <div class="main-img">
+                <img src="images/logo.svg" alt="Logo">
+        </div>
+    </section>
+    <div class="carousel">
+        <div class="carousel-inner">
+          <div class="jacket"><img src="images/jacket-pink.svg" alt="Jacket pink"></div>
+          <div class="jacket"><img src="images/jacket-green.svg" alt="Jacket green"></div>
+          <div class="jacket"><img src="images/jacket-brown.svg" alt="Jacket brown"></div>
+          <div class="jacket"><img src="images/jacket-grey.svg" alt="Jacket grey"></div>
+          <div class="jacket"><img src="images/jacket-blue.svg" alt="Jacket blue"></div>
+        </div>
+        <span class="carousel-arrow prev">&#10094;</span>
+        <span class="carousel-arrow next">&#10095;</span>
+      </div>
+
+      <script>
+        const carousel = document.querySelector('.carousel');
+        const inner = document.querySelector('.carousel-inner');
+        const jackets = document.querySelectorAll('.jacket');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+    
+        let currentIndex = 0;
+    
+        prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? jackets.length - 3 : currentIndex - 1;
+        updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === jackets.length - 3) ? 0 : currentIndex + 1;
+        updateCarousel();
+        });
+    
+        function updateCarousel() {
+          inner.style.transform = `translateX(-${currentIndex * (100 / jackets.length)}%)`;
+        }
+      </script>
+
+
+    <section>
+        <div class="slogan">
+            <h2>define your comfort zone</h2>
+        </div>
+    </section>
+    <section> 
+        <div class="slide">
+            <img src="images/slide.jpg" alt="user images">
+        </div>
+    </section>
+    <section>
+        <div class="user-images">
+            <h2>rainydays look good on you</h2>
+        </div>
+    </section>
+</main>
+
+<footer class="">
+     <div class="footer-content-container">
+        <div>
+            <form class="footer-form" action="" method="get">
+                <input type="email" value="Enter your email"> 
+            </form>
+            <button class="button">Subscribe to rainydays!</button>
+        </div>
+        <nav class="footer-nav-left">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Fabric Care</a></li>
+                <li><a href="#">Our Services</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-nav-right">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>

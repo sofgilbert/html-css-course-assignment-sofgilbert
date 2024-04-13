@@ -1,0 +1,465 @@
+/* Define CSS variables */
+:root {
+    --white: #fff;
+    --black: #000000;
+    --darkgreen: #41473D;
+    --lightgreen: #7E9157;
+    --lightgrey: #d9dad8;
+    --slategrey: #717f95;
+  
+    --font-h2: "Archivo Black", sans-serif;
+    --font-body: "Archivo", sans-serif;
+    --font-h1: var(--font-body);
+    --font-accent: var(--font-body);
+  
+    --fw-light: 300;
+    --fw-medium: 500;
+    --fw-bold: 700;
+  
+    --fs-body: 0.7125rem;
+    --fs-header2: 1.875rem;
+    --fs-header1: 1.5rem;
+    --fs-header3: 1rem;
+    --fs-nav: 1rem;
+    --fs-button: 0.8125rem;
+    --fs-footer: 0.8125rem;
+  
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+    --size-largest: 6rem;
+
+}
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    box-sizing: inherit;
+}
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    
+    color: var(--darkgreen);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img, picture, svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5em;
+}
+
+
+
+
+/* Cart Header styling */ 
+
+.header-checkout {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Distribute items horizontally */
+    align-items: center; /* Align items vertically */
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 24px; /* Simplified margin */
+    margin-bottom: 30px;
+}
+
+.return {
+    color: #41473d;
+    font-family: var(--font-body);
+    text-decoration-line: underline;
+}
+
+.logo-checkout {
+    max-width: 100%; /* Ensure it doesn't overflow */
+    font-size: var(--fs-header1);
+    font-family: var(--font-h1);
+    text-decoration: none;
+}
+
+.logo-checkout h1 {
+    margin: 0; /* Remove default margin */
+
+}
+
+.item {
+    display: flex;
+    gap: 9px;
+    background-color: var(--darkgreen);
+    padding: 1em;
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.cart {
+    width: 24px;
+    height: 24px; /* Set the height to maintain the aspect ratio */
+    object-fit: contain; /* Ensure the entire image fits within the specified dimensions */
+}
+
+.item-text {
+    font-family: var(--font-body);
+    margin: auto 0;
+}
+
+/* Media Queries for smaller viewports */
+@media screen and (max-width: 991px) {
+    .header-checkout {
+        padding: 10px; /* Reduce padding for smaller viewports */
+    }
+    
+    .top {
+        flex-direction: row; /* Stack items vertically for smaller viewports */
+        text-align: center; /* Center-align items */
+        font-size: 80%;
+    }
+
+    .logo-checkout {
+        font-size: 2em; /* Adjust font size for smaller viewports */
+    }
+
+}
+
+
+/* Order summary styling */ 
+.cart-summary {
+    border-radius: 10px;
+    background-color: var(--lightgrey);
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 410px; /* Reduced width */
+    max-width: 100%;
+    flex-direction: column;
+    padding: 40px; /* Reduced padding */
+    margin: auto; /* Center horizontally */
+}
+
+@media (max-width: 991px) {
+    .cart-summary {
+        margin-top: 0px;
+        padding: 0 10px;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .info {
+        max-width: 100%;
+    }
+}
+
+.section-1 {
+    gap: 15px; /* Reduced gap */
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .section-1 {
+        flex-direction: column;
+        align-items: normal;
+        gap: 0px;
+    }
+}
+
+.column-1 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 67%;
+    margin-left: 0px;
+}
+
+@media (max-width: 991px) {
+    .column-1 {
+        width: 100%;
+    }
+}
+
+.order-summary {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 16px; /* Reduced font size */
+    color: var(--darkgreen);
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .column-1 {
+        margin-top: 40px;
+    }
+}
+
+.order-summary-title {
+    font-family: var(--font-body);
+    font-size: var(--fs-header2);
+    font-size: 18px; /* Reduced font size */
+}
+
+.column-1 img {
+    margin-top: 10px; /* Reduced margin */
+    height: 150px; /* Reduced height */
+    background-color: var(--white);
+    width: 170px;
+}
+
+.jacket {
+    font-family: var(--font-body);
+    margin-top: 20px; /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
+}
+
+.price {
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-top: 15px; /* Reduced margin */
+    font-size: 16px; /* Reduced font size */
+}
+
+.code-entry {
+    color: var(--darkgreen);
+    margin-top: 30px;
+    font-family: var(--font-body);
+    font-size: 14px; /* Reduced font size */
+}
+
+/* container holding apply and form*/ 
+.middle-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--darkgreen);
+    font-weight: 500;
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+
+
+.middle-container form {
+    align-self: start;
+    display: inline-block;
+    /* Form outline */
+    padding: 1em;
+    border-radius: 10em;
+}
+
+input,
+textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font-family: var(--font-body);
+    /* Uniform text field size */
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    /* Match form field borders */
+    border: 1px solid var(--white);
+}
+
+.apply-button {
+    background-color: var(--darkgreen);
+    border: none; /* Remove border */
+    color: var(--white);
+    width: 100px; /* Adjust width as needed */
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0.5em; /* Adjust margin as needed */
+    border-radius: .5em;
+    font-family: var(--font-body);
+
+    /* Hover effect */
+    transition: 0.3s ease; /* Smooth transition effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.apply-button:hover {
+    background-color: var(--lightgreen); /* Change background color on hover */
+}
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 991px) {
+    input,
+    textarea {
+        width: 250px; /* Reduce width for smaller screens */
+    }
+
+    .apply-button{
+        width: 100px; /* Reduce width for smaller screens */
+    }
+}
+
+
+
+
+
+
+/* Table */ 
+.two-column {
+    margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+    .two-column {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.-container {
+    gap: 20px;
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .bottom-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+    }
+}
+
+
+
+/* Table styling */
+.two-column table {
+    width: 100%;
+}
+
+.two-column td {
+    font-size: 14px; /* Reduced font size */
+    font-family: var(--font-body);
+    color: var(--darkgreen);
+    font-weight: var(--fw-light);
+    padding: 5px 0; /* Reduced padding */
+}
+
+.two-column .total {
+    color: var(--darkgreen);
+    font-weight: var(--fw-bold);
+    font-size: 16px; /* Reduced font size */
+}
+
+.two-column .free {
+    color: var(--lightgreen);
+    font-size: 14px; /* Reduced font size */
+}
+
+/* Wrap the checkout button in a container */
+.checkout-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+/* Apply styling to the checkout button */
+.checkout {
+    background-color: var(--darkgreen);
+    border: none;
+    color: var(--white);
+    width: 320px; /* Reduced width */
+    height: 40px; /* Reduced height */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Reduced font size */
+    border-radius: .5em;
+    font-family: var(--font-body);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Apply hover effect to the checkout button */
+.checkout:hover {
+    background-color: var(--lightgreen);
+}
+
+@media (max-width: 991px) {
+    .checkout {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+}
+
+.cancel {
+    text-align: center;
+    color: var(--darkgreen);
+    text-decoration-line: underline;
+    margin-top: 20px; /* Reduced margin */
+    font-family: var(--font-body);/* Reduced font size */
+    font-size: 12px;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+@media (max-width: 991px) {
+    .cancel {
+        margin-top: 40px;
+    }
+}
