@@ -90,6 +90,9 @@ textarea:not([rows]) {
 .header-checkout {
     background-color: #fff;
     flex-direction: column;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .top {

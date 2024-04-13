@@ -38,28 +38,25 @@
 
 
 
-/* Box sizing rules */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Prevent font size inflation */
 html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 
-/* Remove default margin and padding */
 * {
     margin: 0;
     padding: 0;
     font: inherit;
 }
 
-/* Set core body defaults */
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -72,35 +69,29 @@ body {
 }
 
 
-/* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
 button, input, label {
     line-height: 1.1;
 }
 
-/* Balance text wrapping on headings */
 h1, h2, h3, h4 {
     text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
     color: currentColor;
 }
 
-/* Make images easier to work with */
 img, picture, svg {
     max-width: 100%;
     display: block;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
     min-height: 10em;
 }
 
-/* Anything that has been anchored to should have extra scroll margin */
 :target {
     scroll-margin-block: 5ex;
 }
@@ -114,23 +105,22 @@ textarea:not([rows]) {
 .primary-header {
     margin-top: var(--size-200);
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center; 
 }
 
 .secondary-header {
     margin-top: var(--size-200);
     display: flex;
     align-items: center;
-    justify-content: center; /* Center items horizontally */
+    justify-content: center;
 }
 
 .secondary-navigation img {
-    width: 30px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some space between images */
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
 }
 
-/* Ensuring the container takes up the full width and centers its content */
 .container {
     width: 100%;
     text-align: center;
@@ -140,7 +130,7 @@ textarea:not([rows]) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure the wrapper spans the entire width */
+    width: 100%;
 }
 
 .mobile-nav-toggle {
@@ -151,27 +141,25 @@ textarea:not([rows]) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%; /* Adjust as needed */
+    width: 25%;
 }
 
-/* Adjustments for smaller screens */
 @media (max-width: 50em) {
     .top-line-logo {
-        width: 20%; /* Adjust as needed */
+        width: 20%;
     }
 
-    /* Ensure icons stay in a horizontal line */
     .secondary-navigation{
-        flex: 1; /* Allow the icons to take up remaining space */
+        flex: 1;
         display: flex;
         align-items: center;
-        justify-content: flex-end; /* Align icons to the right */
-        margin-left: auto; /* Push icons to the right */
+        justify-content: flex-end;
+        margin-left: auto;
     }
 
     .secondary-navigation img {
-        width: 40px; /* Adjust as needed */
-        margin-left: 10px; /* Add some space between icons */
+        width: 40px;
+        margin-left: 10px;
     }
 
     .secondary-navigation {
@@ -203,7 +191,7 @@ textarea:not([rows]) {
   }
 
   .jacket {
-    flex: 0 0 33.33%; /* Display 3 jackets at a time */
+    flex: 0 0 33.33%; 
   }
 
   .carousel-arrow {
@@ -253,36 +241,33 @@ textarea:not([rows]) {
 
 /* Add space between the color image and the "Add to Cart" button */
 .column2-jacket > div {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 
 .column2-jacket > p {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
     margin-bottom: 20px;
     font-weight: var(--fw-light);
     color: var(--darkgreen);
 }
 
 .column2-jacket > button {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
 }
 
 .column2-jacket > .cta-button {
-    margin-top: 60px; /* Adjust as needed */
+    margin-top: 60px;
 }
 
-
-/* Ensure column 2 stays intact */
 .column2-jacket {
     break-inside: avoid; 
 }
 
 .column2-jacket img {
-    max-width: 50%; /* Adjust as needed */
+    max-width: 50%;
     height: auto;
 }
 
-/* smaller screens */
 @media screen and (max-width: 768px) {
     .two-columns-jacket {
         max-width: 75%; 
@@ -290,14 +275,12 @@ textarea:not([rows]) {
     }
 }
 
-/* even smaller screens */
 @media screen and (max-width: 480px) {
     .two-columns-jacket {
         max-width: 60%;
         margin: 4em auto; 
     }
 }
-
 
 button {
     cursor: pointer;
@@ -313,33 +296,28 @@ button {
     transition-duration: 0.3s;
 }
 
-
 .cta-button {
-    width: 50%; /* Adjust width as needed */
+    width: 50%;
     max-width: 200px; 
     background-color: white;
-    color: var(--darkgreen); /* Green text color */
-    border: 2px solid var(--darkgreen); /* Green border */
+    color: var(--darkgreen);
+    border: 2px solid var(--darkgreen);
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 1em; /* Adjust font size as needed */
+    font-size: 1em;
 }
 
 .cta-button:hover,
 .cta-button:focus-visible {
-    background-color: var(--darkgreen); /* Change background color on hover */
-    color: white; /* Change text color on hover */
+    background-color: var(--darkgreen);
+    color: white;
 }
-
-
 
 .button:hover,
 .button:focus-visible {
     background-color: var(--lightgreen);
     color: var(--white);
 }
-
-
 
 .text-section {
     text-align: left;
@@ -356,15 +334,13 @@ button {
 }
 
 .text-section ul {
-    margin-left: 20px; /* Adjust indentation as needed */
+    margin-left: 20px;
 }
 
 .text-section p:last-of-type {
-    margin-top: 2em; /* Adjust space between list and last paragraph */
+    margin-top: 2em;
 }
 
-
-/* smaller screens */
 @media screen and (max-width: 768px) {
     .text-section {
         max-width: 75%; 
@@ -372,7 +348,6 @@ button {
     }
 }
 
-/* even smaller screens */
 @media screen and (max-width: 480px) {
     .text-section {
         max-width: 60%;
@@ -436,58 +411,54 @@ footer {
     color: #FFF;
     font-family: var(--font-body);
     font-size: var(--fs-footer);
-    padding: 2rem; /* Adjust padding as needed */
-    text-align: center; /* Center the content horizontally */
+    padding: 2rem;
+    text-align: center;
     margin-top: 10em;
 }
 
 .footer-content-container {
     display: flex;
-    flex-wrap: wrap; /* Items will wrap to the next line when necessary */
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: flex-start; /* Align items to the top of the container */  
+    align-items: flex-start;  
 }
 
 .form-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     justify-content: left;
 }
 
 .footer-form {
-    flex: 1 1 auto; /* Allow form to grow and shrink */
-    margin-right: 1rem; /* Adjust margin as needed */
-    margin-bottom: 1rem; /* Add margin at the bottom */
+    flex: 1 1 auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     border-radius: 50px;
 }
 
 .button {
-    flex: 0 1 auto; /* Allow button to grow and shrink */
-    align-self: center; /* Align button vertically center */
+    flex: 0 1 auto;
+    align-self: center;
     border-radius: 20px;
 }
 
 .footer-nav-left,
 .footer-nav-right {
-    flex: 0 0 100px; /* Fixed width for each column */
-    margin-right: 1rem; /* Adjust margin as needed */
-    margin-bottom: 1rem; /* Add margin at the bottom */
+    flex: 0 0 100px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .footer-nav-left ul,
 .footer-nav-right ul {
-    padding: 0; /* Remove default padding */
-    list-style: none; /* Remove default list style */
+    padding: 0;
+    list-style: none;
 }
 
 .footer-nav-left ul li,
 .footer-nav-right ul li {
-    margin-bottom: 0.5rem; /* Adjust margin as needed */
-} 
-
-
-
-
+    margin-bottom: 0.5rem;
+}
 
 
 
@@ -581,16 +552,16 @@ footer {
 }
 
 
-/* Media query for smaller viewports */
+
 @media screen and (max-width: 800px) {
     .slogan,
     .user-images {
-        height: 20vh; /* Adjust the height for smaller viewports */
+        height: 20vh; 
     }
 }
 
 @media screen and (max-width: 800px) {
     .main-img {
-        height: 40vh; /* Adjust the height for smaller viewports */
+        height: 40vh;
     }
 }
