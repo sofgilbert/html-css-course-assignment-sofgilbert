@@ -109,7 +109,9 @@ textarea:not([rows]) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .top {
@@ -247,6 +249,8 @@ form {
     justify-content: space-between;
     display: flex;
     width: 100%;
+
+
     div {
         width: 45%;
     }
@@ -281,6 +285,7 @@ form input, form select, form textarea {
     form {
         >* {
             margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         input, select, textarea {
