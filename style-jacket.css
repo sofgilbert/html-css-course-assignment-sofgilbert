@@ -329,6 +329,10 @@ button {
     padding: 2em;
 }
 
+.text-section h2 {
+    font-weight: var(--fw-bold);
+}
+
 .text-section p {
     margin-bottom: 1.5em; 
 }
