@@ -17,7 +17,7 @@
     --fw-bold: 700;
 
     --fs-body: 0.7125rem;
-    --fs-header2: 1.875rem;
+    --fs-header2: 1.2rem;
     --fs-header1: 2.5rem;
     --fs-nav: 1rem;
     --fs-button: 0.8125rem;
@@ -173,6 +173,14 @@ textarea:not([rows]) {
 
 .text-section p {
     margin-bottom: 1.5em;
+    font-family: var(--font-body);
+}
+
+.text-section h1 {
+    text-align: center;
+    font-size: var(--fs-header2);
+    font-family: var(--font-body);
+    margin-bottom: 2em;
 }
 
 @media screen and (max-width: 768px) {
