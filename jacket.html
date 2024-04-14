@@ -15,12 +15,13 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html"><img src="images/favicon.svg" alt="Raindrop"></a>
-                    <button class="mobile-nav-toggle">
-                        <img class="icon-hamburger" src="images/hamburger.svg" alt="" aria-hidden="true">
+                
+                    <button class="mobile-nav-toggle" aria-label="Open menu">
+                        <img class="icon-hamburger" src="images/hamburger.svg" alt="Menu" aria-hidden="true">
                         <span class="visually-hidden">Menu</span>
                     </button>
-                    <nav class="secondary-navigation" >
-                        <ul class="nav-bar" id="secondary-navigation">
+                    <nav class="secondary-navigation" aria-label="User tools">
+                        <ul aria-label="User actions" class="nav-bar" id="secondary-navigation">
                             <li><a aria-label="search" href="#"><img src="images/search-circle.svg" alt="Search"></a></li>
                             <li><a aria-label="user" href="account.html"><img src="images/user-circle.svg" alt="User account"></a></li>
                             <li><a aria-label="likes" href="#"><img src="images/heart.svg" alt="Likes"></a></li>
@@ -33,9 +34,8 @@
     <header class="secondary-header">
             <div class="container">
                 <div class="nav-wrapper-second">
-                    <nav class="primary-nav font-h1 center">
-                        <a href="index.html"><h1 class="font-h1 fs-primary-heading padding-block-300 ">rainydays</h1></a>
-                        <ul aria-label="primary" class="nav-list" id="primary-navigation">
+                    <nav class="primary-nav font-h1 center" aria-label="Main website navigation">
+                        <ul aria-label="Primary links" class="nav-list" id="primary-navigation">
                             <li><a href="jacket.html">New in</a></li>
                             <li><a href="#">Women</a></li>
                             <li><a href="#">Men</a></li>
@@ -50,22 +50,22 @@
 
 
 <main>
-    <section class="two-columns-jacket">
-        <section class="column1-jacket">
+    <section class="two-columns-jacket" aria-label="Jacket information">
+        <section class="column1-jacket" aria-label="Jacket image">
             <div class="jacket"><h2><img src="images/jacket-pink.svg" alt="Jacket pink"></h2></div>
         </section>
-        <section class="column2-jacket"> 
+        <section class="column2-jacket" aria-label="Jacket details"> 
             <h3 class="fs-tertiary-heading">rainyday The Rainyday Jacket</h3>
-                <button>Women</button>
-                <button>Men</button>
+                <button aria-label="Select for women">Women</button>
+                <button aria-label="Select for men">Men</button>
             <p>Colour: Pink</p>
             <div><img src="images/colours.jpg" alt="colours"></div>
             <p>Size: XS S M L XL</p>
-            <button class = "cta-button">Add to Cart</button>
+            <button class = "cta-button" aria-label="Add to cart">Add to Cart</button>
         </section>
     </section>
 
-    <section class="text-section">
+    <section class="text-section" aria-label="Product description">
         <h2>Your ultimate companion for outdoor adventures.</h2>
         <div><p>Crafted for durability and versatility, this sleek, longer silhouette offers extended coverage and protection. </p></div>
         <div><ul> 
@@ -82,7 +82,7 @@
 
 
 
-<div class="carousel">
+<div class="carousel" aria-label="Product image carousel">
     <div class="carousel-inner">
       <div class="jacket"><img src="images/jacket-green.svg" alt="Jacket green"></div>
       <div class="jacket"><img src="images/jacket-brown.svg" alt="Jacket brown"></div>
@@ -90,9 +90,9 @@
       <div class="jacket"><img src="images/jacket-blue.svg" alt="Jacket blue"></div>
       <div class="jacket"><img src="images/jacket-pink.svg" alt="Jacket pink"></div>
     </div>
-    <span class="carousel-arrow prev">&#10094;</span>
-    <span class="carousel-arrow next">&#10095;</span>
-  </div>
+    <span class="carousel-arrow prev" aria-label="Previous slide">&#10094;</span>
+    <span class="carousel-arrow next" aria-label="Next slide">&#10095;</span>
+</div>
 
   <script>
     const carousel = document.querySelector('.carousel');
@@ -124,32 +124,33 @@
     
 </main>
 
-<footer class="">
-     <div class="footer-content-container">
-        <div>
-            <form class="footer-form" method="get">
-                <input type="email"> 
-            </form>
-            <button class="button">Subscribe to rainydays!</button>
-        </div>
-        <nav class="footer-nav-left">
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Store Locator</a></li>
-                <li><a href="#">Fabric Care</a></li>
-                <li><a href="#">Our Services</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-nav-right">
-            <ul>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="#">Size Guide</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
-        </nav>
-    </div>
+<footer aria-label="Website footer">
+    <div class="footer-content-container">
+       <div>
+           <form class="footer-form" method="get" aria-label="Email subscription form">
+               <input type="email" value="Enter your email"> 
+               <label>Email</label>
+           </form>
+           <button class="button">Subscribe to rainydays</button>
+       </div>
+       <nav class="footer-nav-left" aria-label="Footer left navigation">
+           <ul>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="#">Careers</a></li>
+               <li><a href="#">Store Locator</a></li>
+               <li><a href="#">Fabric Care</a></li>
+               <li><a href="#">Our Services</a></li>
+           </ul>
+       </nav>
+       <nav class="footer-nav-right" aria-label="Footer right navigation">
+           <ul>
+               <li><a href="contact.html">Contact us</a></li>
+               <li><a href="#">Size Guide</a></li>
+               <li><a href="#">Shipping</a></li>
+               <li><a href="#">Feedback</a></li>
+           </ul>
+       </nav>
+   </div>
 </footer>
 
 </body>

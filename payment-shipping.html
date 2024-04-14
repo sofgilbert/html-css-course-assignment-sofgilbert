@@ -10,14 +10,14 @@
 <body>
 
 
-    <header class="header-checkout">
+    <header class="header-checkout" aria-label="Main header">
         <div class="top">
-            <a href="index.html"><p class="return">Back to home page</p></a>
-            <nav class="logo-checkout center">
+            <a href="index.html" aria-label="Back to homepage"><p class="return">Back to home page</p></a>
+            <nav class="logo-checkout" aria-label="Checkout navigation">
                 <h1 class="">rainydays</h1>
             </nav>
             <div class="item">
-                <a href="cart.html"><img class="cart" src="images/shopping-bag.png" alt="Cart"></a> 
+                <a href="cart.html" aria-label="Go to cart"><img class="cart" src="images/shopping-bag.png" alt="Cart"></a> 
                 <div class="item-text">1 item</div>
             </div>
         </div>
@@ -25,38 +25,38 @@
 
 <main>
 
-<section class="checkout-container">
+<section class="checkout-container" aria-label="Shipping and payment form">
         <div class="wrapper cart-summary container">
-            <form>
+            <form aria-label="Shipping details form">
                 <h1>
                     Shipping Details
                 </h1>
                 <div class="name">
                     <div>
                         <label for="f-name">First</label>
-                        <input id="f-name" type="text" name="f-name">
+                        <input id="f-name" type="text" name="f-name" aria-label="First name">
                     </div>
                     <div>
                         <label for="l-name">Last</label>
-                        <input id="l-name" type="text" name="l-name">
+                        <input id="l-name" type="text" name="l-name" aria-label="Last name">
                     </div>
                 </div>
                 <div class="street">
                     <label for="street">Street</label>
-                    <input id="street" type="text" name="address">
+                    <input id="street" type="text" name="address" aria-label="Street address">
                 </div>
                 <div class="address-info">
                     <div>
                         <label for="city">City</label>
-                        <input id="city" type="text" name="city">
+                        <input id="city" type="text" name="city" aria-label="City">
                     </div>
                     <div>
                         <label for="country">Country</label>
-                        <input id="country" type="text" name="state">
+                        <input id="country" type="text" name="country" aria-label="Country">
                     </div>
                     <div>
                         <label for="postcode">Post code</label>
-                        <input id="postcode" type="text" name="zip">
+                        <input id="postcode" type="text" name="postal code" aria-label="Postal code">
                     </div>
                 </div>
                 <h1>
@@ -64,16 +64,16 @@
                 </h1>
                 <div class="cc-num">
                     <label for="card-num">Credit Card No.</label>
-                    <input id="card-num" type="text" name="card-num">
+                    <input id="card-num" type="text" name="card-num" aria-label="Credit card number">
                 </div>
                 <div class="cc-info">
                     <div>
                         <label for="exp-date">Exp</label>
-                        <input id="exp-date" type="text" name="expire">
+                        <input id="exp-date" type="text" name="expire" aria-label="Expiration date">
                     </div>
                     <div>
                         <label for="ccv">CCV</label>
-                        <input id="ccv" type="text" name="security">
+                        <input id="ccv" type="text" name="ccv" aria-label="Security code (CCV)">
                     </div>
                 </div>
             </form>
@@ -82,32 +82,32 @@
 
 
 
-<div class="cart-summary">
+<div class="cart-summary" aria-label="Order summary">
           
     <div class="info">
         <div class="section-1">
             <div class="column-1">
                 <div class="order-summary">
                   <h1>Order Summary</h1>
-                  <a href="jacket.html"><img src="images/jacket-pink.svg" alt="Jacket pink"></a>
-                  <a href="jacket.html"><div class="jacket">rainydays The Jacket</div></a>
+                  <a href="jacket.html" aria-label="View Jacket details"><img src="images/jacket-pink.svg" alt="Jacket pink"></a>
+                  <a href="jacket.html" aria-label="View Jacket details"><div class="jacket">rainydays The Jacket</div></a>
                   <div class="price">$100.00</div>
                 </div>
             </div>
     </div>
           
-    <div class="code-entry">Gift Card / Discount code</div>
+    <div class="code-entry" aria-label="Discount code entry">Gift Card / Discount code</div>
     <div class="middle-container">
             <form>
-                <input type="text" name="discount">
+                <input type="text" name="discount" aria-label="Enter discount code">
             </form>
     </div>
 
    
 
-    <div class="two-column">
+    <div class="two-column" aria-label="Price details">
         <div class="bottom-container">
-            <table>
+            <table aria-label="Price breakdown">
                 <tr>
                     <td>Sub total</td>
                     <td>$100.00</td>
@@ -129,13 +129,13 @@
     </div>  
 </div>
 
-        <div class="checkout-container">
-            <button class="checkout">Checkout</button>
+        <div class="checkout-container" aria-label="Submit order">
+            <button class="checkout">Submit order</button>
         </div>
 
 
 
-        <div class="cancel"><a href="index.html">Cancel order</a> </div>
+        <div class="cancel"><a href="index.html" aria-label="Cancel order and return to homepage">Cancel order</a> </div>
         </div>
 
             </section>        

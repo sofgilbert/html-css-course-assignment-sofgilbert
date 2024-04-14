@@ -22,12 +22,12 @@
             <div class="nav-wrapper">
                 <a href="index.html"><img src="images/favicon.svg" alt="Raindrop"></a>
                 
-                    <button class="mobile-nav-toggle">
-                        <img class="icon-hamburger" src="images/hamburger.svg" alt="" aria-hidden="true">
+                    <button class="mobile-nav-toggle" aria-label="Open menu">
+                        <img class="icon-hamburger" src="images/hamburger.svg" alt="Menu" aria-hidden="true">
                         <span class="visually-hidden">Menu</span>
                     </button>
-                    <nav class="secondary-navigation" >
-                        <ul aria-label="secondary" class="nav-bar" id="secondary-navigation">
+                    <nav class="secondary-navigation" aria-label="User tools">
+                        <ul aria-label="User actions" class="nav-bar" id="secondary-navigation">
                             <li><a aria-label="search" href="#"><img src="images/search-circle.svg" alt="Search"></a></li>
                             <li><a aria-label="user" href="account.html"><img src="images/user-circle.svg" alt="User account"></a></li>
                             <li><a aria-label="likes" href="#"><img src="images/heart.svg" alt="Likes"></a></li>
@@ -40,8 +40,8 @@
     <header class="secondary-header">
             <div class="container">
                 <div class="nav-wrapper-second">
-                    <nav class="primary-nav font-h1 center">
-                        <ul aria-label="primary" class="nav-list" id="primary-navigation">
+                    <nav class="primary-nav font-h1 center" aria-label="Main website navigation">
+                        <ul aria-label="Primary links" class="nav-list" id="primary-navigation">
                             <li><a href="jacket.html">New in</a></li>
                             <li><a href="#">Women</a></li>
                             <li><a href="#">Men</a></li>
@@ -58,7 +58,7 @@
                 <h1><img src="images/logo.svg" alt="Logo"></h1>
         </div>
     </section>
-    <div class="carousel">
+    <div class="carousel" aria-label="Product image carousel">
         <div class="carousel-inner">
           <div class="jacket"><a href="jacket.html"><img src="images/jacket-pink.svg" alt="Jacket pink"></a></div>
           <div class="jacket"><img src="images/jacket-green.svg" alt="Jacket green"></div>
@@ -66,8 +66,8 @@
           <div class="jacket"><img src="images/jacket-grey.svg" alt="Jacket grey"></div>
           <div class="jacket"><img src="images/jacket-blue.svg" alt="Jacket blue"></div>
         </div>
-        <span class="carousel-arrow prev">&#10094;</span>
-        <span class="carousel-arrow next">&#10095;</span>
+        <span class="carousel-arrow prev" aria-label="Previous slide">&#10094;</span>
+        <span class="carousel-arrow next" aria-label="Next slide">&#10095;</span>
       </div>
 
       <script>
@@ -112,33 +112,33 @@
     </section>
 </main>
 
-<footer class="">
-     <div class="footer-content-container">
-        <div>
-            <form class="footer-form" method="get">
-                <input type="email" value="Enter your email"> 
-                <label>Email</label>
-            </form>
-            <button class="button">Subscribe to rainydays</button>
-        </div>
-        <nav class="footer-nav-left">
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Store Locator</a></li>
-                <li><a href="#">Fabric Care</a></li>
-                <li><a href="#">Our Services</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-nav-right">
-            <ul>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="#">Size Guide</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
-        </nav>
-    </div>
+<footer aria-label="Website footer">
+    <div class="footer-content-container">
+       <div>
+           <form class="footer-form" method="get" aria-label="Email subscription form">
+               <input type="email" value="Enter your email"> 
+               <label>Email</label>
+           </form>
+           <button class="button">Subscribe to rainydays</button>
+       </div>
+       <nav class="footer-nav-left" aria-label="Footer left navigation">
+           <ul>
+               <li><a href="about.html">About Us</a></li>
+               <li><a href="#">Careers</a></li>
+               <li><a href="#">Store Locator</a></li>
+               <li><a href="#">Fabric Care</a></li>
+               <li><a href="#">Our Services</a></li>
+           </ul>
+       </nav>
+       <nav class="footer-nav-right" aria-label="Footer right navigation">
+           <ul>
+               <li><a href="contact.html">Contact us</a></li>
+               <li><a href="#">Size Guide</a></li>
+               <li><a href="#">Shipping</a></li>
+               <li><a href="#">Feedback</a></li>
+           </ul>
+       </nav>
+   </div>
 </footer>
 
 </body>
