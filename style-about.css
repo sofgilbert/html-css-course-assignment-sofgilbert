@@ -176,7 +176,7 @@ textarea:not([rows]) {
     font-family: var(--font-body);
 }
 
-.text-section h1 {
+.text-section h2 {
     text-align: center;
     font-size: var(--fs-header2);
     font-family: var(--font-body);

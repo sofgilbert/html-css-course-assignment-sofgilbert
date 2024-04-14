@@ -17,7 +17,7 @@
     --fw-bold: 700;
 
     --fs-body: 0.7125rem;
-    --fs-header2: 1.875rem;
+    --fs-header2: 1.2rem;
     --fs-header1: 2.5rem;
     --fs-header3: 1rem;
     --fs-nav: 1rem;
@@ -179,6 +179,13 @@ textarea:not([rows]) {
     max-width: 800px;
     font-family: var(--font-body);
     columns: 2;
+}
+
+.two-columns h2 {
+    text-align: left;
+    font-size: var(--fs-header2);
+    font-family: var(--font-body);
+    margin-bottom: 2em;
 }
 
 .two-columns h3,
