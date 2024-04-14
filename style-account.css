@@ -208,11 +208,13 @@ textarea:not([rows]) {
     margin-top: 20px;
 }
 
-.cancel {
+
+.cancel, 
+.continue {
     text-align: center;
     color: var(--darkgreen);
     text-decoration-line: underline;
-    margin-top: 100px;
+    margin-top: 30px;
     font-family: var(--font-body);
     font-size: 12px;
 }
@@ -227,7 +229,8 @@ textarea:not([rows]) {
     .signin,
     .create-account,
     .guest {
-        width: 80%;
-        font-size: 18px;
+        
+        width: 60%;
+        font-size: 14px;
     }
 }

@@ -342,7 +342,7 @@ form input, form select, form textarea {
 @media (max-width: 991px) {
     .cart-summary {
         margin-top: 0px;
-        padding: 0 5px;
+        padding: 0 40px;
     }
 }
 
@@ -542,7 +542,7 @@ form input, form select, form textarea {
 
 @media (max-width: 991px) {
     .checkout {
-        margin-top: 40px;
+        margin-top: 20px;
         padding: 0 20px;
         width: 60%;
     }
@@ -552,7 +552,7 @@ form input, form select, form textarea {
     text-align: center;
     color: var(--darkgreen);
     text-decoration-line: underline;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: var(--font-body);
     font-size: 12px;
     margin-bottom: 20px;
@@ -560,7 +560,7 @@ form input, form select, form textarea {
 
 @media (max-width: 991px) {
     .cancel {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 }
 
@@ -583,7 +583,7 @@ form input, form select, form textarea {
 }
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 991px) {
     .checkout-container {
         flex-direction: row;
         justify-content: center;
